@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="TestVPn" customModuleProvider="target">
+            <connections>
+                <outlet property="choosetImageView" destination="lrc-q3-aIL" id="Mmt-ic-5Tr"/>
+                <outlet property="menuButton" destination="zRG-me-EA4" id="6nF-ZM-ciw"/>
+                <outlet property="turnOnButton" destination="iH6-sS-pSo" id="hxK-qL-eeI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kosmos" translatesAutoresizingMaskIntoConstraints="NO" id="KOj-ne-wOq">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iH6-sS-pSo">
+                    <rect key="frame" x="132" y="373" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iH6-sS-pSo" secondAttribute="height" multiplier="1:1" id="8RV-qf-lbb"/>
+                        <constraint firstAttribute="width" constant="150" id="QuL-tx-MMy"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Turn off">
+                        <backgroundConfiguration key="background" cornerRadius="84">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                        <color key="baseForegroundColor" red="0.13725490196078433" green="0.14901960784313725" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="turnOnConnection:" destination="-1" eventType="touchUpInside" id="XYP-dU-b4M"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-me-EA4">
+                    <rect key="frame" x="356" y="52" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0Tx-em-AmJ"/>
+                        <constraint firstAttribute="width" secondItem="zRG-me-EA4" secondAttribute="height" multiplier="1:1" id="DaZ-ec-TJy"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="menuIcon" imagePadding="0.0"/>
+                    <connections>
+                        <action selector="showCountriesMenu:" destination="-1" eventType="touchUpInside" id="cNt-q1-nSb"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lrc-q3-aIL">
+                    <rect key="frame" x="87" y="573" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="3pl-fs-7p9"/>
+                        <constraint firstAttribute="height" constant="128" id="Gbe-7Q-Ims"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KOj-ne-wOq" secondAttribute="bottom" id="01u-fB-68t"/>
+                <constraint firstItem="lrc-q3-aIL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IGf-Uf-TVt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zRG-me-EA4" secondAttribute="trailing" constant="8" id="ODn-D4-Trc"/>
+                <constraint firstAttribute="trailing" secondItem="KOj-ne-wOq" secondAttribute="trailing" id="SiX-xr-oM1"/>
+                <constraint firstItem="KOj-ne-wOq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zbd-zD-uzB"/>
+                <constraint firstItem="zRG-me-EA4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="auW-0K-4D3"/>
+                <constraint firstItem="iH6-sS-pSo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eKO-Rs-2LF"/>
+                <constraint firstItem="KOj-ne-wOq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lFx-Km-wno"/>
+                <constraint firstItem="lrc-q3-aIL" firstAttribute="top" secondItem="iH6-sS-pSo" secondAttribute="bottom" constant="50" id="lt9-gY-4ly"/>
+                <constraint firstItem="iH6-sS-pSo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xy4-2N-yt0"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Kosmos" width="800" height="585"/>
+        <image name="menuIcon" width="53" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
